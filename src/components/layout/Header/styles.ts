@@ -6,6 +6,11 @@ import { stylesToColorSvg } from "~/theme/utils";
 
 export const HeaderContainer = styled(Box)(({ theme }) => ({
   borderBottom: `2px solid ${theme.palette.other.stroke}`,
+  fontStyle: "oblique",
+}));
+
+export const MenuContainer = styled(Box)(() => ({
+  fontStyle: "oblique",
 }));
 
 export const StyledLocationIcon = styled(LocationIcon)(({ theme }) => ({

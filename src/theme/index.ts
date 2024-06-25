@@ -100,6 +100,7 @@ export default (mode: PaletteMode) =>
               shadow: "rgba(255,250,250, 0.2)",
             },
             icon: {
+              iconBackground: "#F2F3F6",
               accent: "#1FB0EE",
             },
             text: {
