@@ -15,7 +15,7 @@ const MainPage = () => {
   return (
     <MainLayout>
       <Grid container columnSpacing="8px" rowSpacing="12px">
-        <Grid item mobile={6}>
+        <Grid item>
           <MoneyInfo info={info}></MoneyInfo>
         </Grid>
       </Grid>
