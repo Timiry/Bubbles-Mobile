@@ -1,6 +1,5 @@
 import { PaletteMode, alpha, createTheme } from "@mui/material";
 
-import "./interfaces";
 import MuiCssBaseline from "./components/MuiCssBaseline";
 import MuiButton from "./components/MuiButton";
 
@@ -102,6 +101,8 @@ export default (mode: PaletteMode) =>
             icon: {
               iconBackground: "#F2F3F6",
               accent: "#1FB0EE",
+              secondary: "#858F9B",
+              iconBackground: "#383838",
             },
             text: {
               primary: "#D9D9D9",
@@ -139,15 +140,9 @@ export default (mode: PaletteMode) =>
               shadow: "rgba(0,0,0, 0.04)",
             },
             icon: {
-              primary: "#130F26",
-              secondary: "#8E99A5",
               accent: "#1FB0EE",
-              disabled: "#CED0D3",
-              success: "#25C10C",
-              error: "#C2030E",
-              warning: "#FFAB53",
-              light: "#FFFFFF",
-              iconBackground: "#F2F3F6",
+              secondary: "#858F9B",
+              iconBackground: "#8E99A5",
             },
             text: {
               primary: "#000000",
@@ -175,8 +170,6 @@ export default (mode: PaletteMode) =>
               underlineAccent: "#1FB0EE",
               shimmer:
                 "linear-gradient(223.61deg, rgba(227, 229, 236, 0.3) 15.94%, rgba(200, 204, 219, 0.3) 87.64%)",
-              progressBar: "#EA502E",
-              sliderBackground: "#222223",
             },
           }),
     },
