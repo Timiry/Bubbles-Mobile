@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import { LoginInputField, SubmitButton } from "../styles";
-import { setOtpStep } from "~/store/slices/login/login";
+import { setOtpStep } from "~/store/slices/login";
 import { useAppDispatch } from "~/store";
 
 type PhoneNumber = {

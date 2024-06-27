@@ -1,5 +1,5 @@
 import { useAppSelector } from "~/store";
-import { selectStep } from "~/store/slices/login/login";
+import { selectStep } from "~/store/slices/login";
 import { PhoneForm } from "./components/PhoneForm";
 import { FormWrapper, LoginLogoContainer } from "./styles";
 import { OtpForm } from "./components/OtpForm";

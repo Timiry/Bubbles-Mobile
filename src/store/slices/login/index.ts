@@ -5,8 +5,8 @@ const loginStep = createSlice({
   name: "step",
   initialState: {
     value: "phone",
-    phoneNumber: " ",
-    otp: " ",
+    phoneNumber: "",
+    otp: "",
   },
   reducers: {
     setPhoneStep: (state) => {
@@ -15,13 +15,13 @@ const loginStep = createSlice({
     setOtpStep: (state) => {
       state.value = "otp";
     },
-    SetCompleteStep: (state) => {
+    setCompleteStep: (state) => {
       state.value = "complete";
     },
   },
 });
 
-export const { setPhoneStep, setOtpStep, SetCompleteStep } = loginStep.actions;
+export const { setPhoneStep, setOtpStep, setCompleteStep } = loginStep.actions;
 
 export default loginStep.reducer;
 

@@ -9,7 +9,7 @@ import {
 import { Controller, useForm } from "react-hook-form";
 import { useAppDispatch } from "~/store";
 import { LoginInputField, SubmitButton } from "../styles";
-import { SetCompleteStep, setPhoneStep } from "~/store/slices/login/login";
+import { setCompleteStep, setPhoneStep } from "~/store/slices/login";
 import { useState } from "react";
 import Hide from "~/assets/icons/Hide.svg?react";
 import Show from "~/assets/icons/Show.svg?react";
@@ -44,7 +44,7 @@ export const OtpForm = () => {
     if (data.otp) {
       if (checkOtp()) {
         localStorage.removeItem("phoneNumber");
-        dispatch(SetCompleteStep());
+        dispatch(setCompleteStep());
         goToMainPage();
       }
     } else {
