@@ -24,7 +24,7 @@ const MoneyInfo = ({ info }: { info: IMoneyAccountInfo }) => {
   }
 
   return (
-    <Card variant="outlined" sx={{ borderRadius: "10px", maxWidth: "450px" }}>
+    <Card variant="outlined" sx={{ borderRadius: "16px", maxWidth: "450px" }}>
       <Grid container p="20px">
         <Grid item pt="10px">
           <Typography variant="B7Regular" color="text.secondary">
