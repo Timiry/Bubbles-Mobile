@@ -15,6 +15,11 @@ const initialState: Required<AuthData> = {
   token: "",
 };
 
+interface LoginData {
+  otp?: string;
+  phoneNumber?: string;
+}
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -33,8 +38,39 @@ const authSlice = createSlice({
   },
 });
 
+export const loginStep = createSlice({
+  name: "step",
+  initialState: {
+    value: "phone",
+    phoneNumber: " ",
+    otp: " ",
+  },
+  reducers: {
+    phone: (state) => {
+      state.value = "phone";
+    },
+    otp: (state) => {
+      state.value = "otp";
+    },
+    complete: (state) => {
+      state.value = "complete";
+    },
+    setPhoneNumber: (state, action: PayloadAction<LoginData>) => {
+      if (action.payload?.phoneNumber) {
+        localStorage.setItem("phoneNumber", action.payload?.phoneNumber);
+      }
+    },
+  },
+});
+
 export const { setAccessToken, removeSession } = authSlice.actions;
 
 export default authSlice.reducer;
 
 export const accessTokenSelector = (state: RootState) => state.auth.token;
+
+export const { phone, otp, complete, setPhoneNumber } = loginStep.actions;
+
+export const loginStepReduser = loginStep.reducer;
+
+export const selectStep = (state: RootState) => state.step.value;
