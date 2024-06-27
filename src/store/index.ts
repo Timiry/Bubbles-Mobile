@@ -2,8 +2,10 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import { mainApi } from "./services/main";
 import { authApi } from "./services/auth";
-import authReducer, { loginStepReduser } from "./slices/auth/auth";
+import authReducer from "./slices/auth/auth";
+
 import { useDispatch, useSelector } from "react-redux";
+import loginStepReduser from "./slices/login/login";
 
 export const store = configureStore({
   reducer: {

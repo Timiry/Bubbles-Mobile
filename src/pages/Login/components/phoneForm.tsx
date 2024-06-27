@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import { LoginInputField, SubmitButton } from "../styles";
-import { otp, setPhoneNumber } from "~/store/slices/auth/auth";
+import { setOtpStep } from "~/store/slices/login/login";
 import { useAppDispatch } from "~/store";
 
 type PhoneNumber = {
@@ -22,8 +22,8 @@ export const PhoneForm = () => {
     if (data.phoneNumber) {
       if (data.phoneNumber.length <= 18) {
         if (/(?:\+|\d)[\d\-() ]{9,}\d/.test(data.phoneNumber)) {
-          dispatch(setPhoneNumber({ phoneNumber: data.phoneNumber }));
-          dispatch(otp());
+          localStorage.setItem("phoneNumber", data.phoneNumber);
+          dispatch(setOtpStep());
         } else {
           setError("phoneNumber", { message: "Неправильно введён номер" });
         }

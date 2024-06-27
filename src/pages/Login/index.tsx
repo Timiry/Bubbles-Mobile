@@ -1,8 +1,8 @@
 import { useAppSelector } from "~/store";
-import { selectStep } from "~/store/slices/auth/auth";
-import { PhoneForm } from "./components/phoneForm";
+import { selectStep } from "~/store/slices/login/login";
+import { PhoneForm } from "./components/PhoneForm";
 import { FormWrapper, LoginLogoContainer } from "./styles";
-import { OtpForm } from "./components/otpForm";
+import { OtpForm } from "./components/OtpForm";
 import { Grid } from "@mui/material";
 import Logo from "/bubbles-mobile.png";
 

@@ -1,18 +1,17 @@
 import { Box, Typography } from "@mui/material";
-import { Component, ReactNode, memo } from "react";
-import Countdown, { CountdownApi, CountdownRenderProps } from "react-countdown";
-import { RestartIcon } from "~/components/svgComponents/RestartIcon";
+import { memo, useReducer, useState } from "react";
+import Countdown, { CountdownRenderProps } from "react-countdown";
+import Restart from "~/assets/icons/Restart.svg?react";
 
-export default class CountdownApiExample extends Component {
-  countdownApi: CountdownApi | null = null;
-  state = { date: Date.now() + 10000 };
+export const CountdownApi = () => {
+  const [date, setDate] = useState(Date.now() + 10000);
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
-  handleResetClick = (): void => {
-    console.log(121);
-    this.setState({ date: Date.now() + 10000 });
+  const handleResetClick = () => {
+    setDate(Date.now() + 10000);
   };
 
-  renderer = ({ formatted, completed }: CountdownRenderProps) => {
+  const renderer = ({ formatted, completed }: CountdownRenderProps) => {
     if (completed) {
       return (
         <Box
@@ -23,10 +22,14 @@ export default class CountdownApiExample extends Component {
           gap="3px"
           height="24px"
         >
-          <Typography variant="B8SemiBold" color="text.accent">
+          <Typography
+            variant="B8SemiBold"
+            color="text.accent"
+            onClick={handleResetClick}
+          >
             Отправить SMS повторно
           </Typography>
-          <RestartIcon></RestartIcon>
+          <Restart></Restart>
         </Box>
       );
     } else {
@@ -40,35 +43,18 @@ export default class CountdownApiExample extends Component {
     }
   };
 
-  handleUpdate = (): void => {
-    this.forceUpdate();
+  const handleUpdate = () => {
+    forceUpdate();
   };
 
-  setRef = (countdown: Countdown | null): void => {
-    if (countdown) {
-      this.countdownApi = countdown.getApi();
-    }
-  };
+  return (
+    <Countdown
+      key={date}
+      date={date}
+      onComplete={handleUpdate}
+      renderer={renderer}
+    />
+  );
+};
 
-  isCompleted(): boolean {
-    return !!(this.countdownApi && this.countdownApi.isCompleted());
-  }
-  render(): ReactNode {
-    return (
-      <Box onClick={this.handleResetClick}>
-        <Countdown
-          key={this.state.date}
-          ref={this.setRef}
-          date={this.state.date}
-          onMount={this.handleUpdate}
-          onStart={this.handleUpdate}
-          onPause={this.handleUpdate}
-          onComplete={this.handleUpdate}
-          renderer={this.renderer}
-        />
-      </Box>
-    );
-  }
-}
-
-export const OtpCountdown = memo(CountdownApiExample);
+export const OtpCountdown = memo(CountdownApi);

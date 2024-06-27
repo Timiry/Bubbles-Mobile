@@ -9,12 +9,10 @@ import {
 import { Controller, useForm } from "react-hook-form";
 import { useAppDispatch } from "~/store";
 import { LoginInputField, SubmitButton } from "../styles";
-import { complete, phone } from "~/store/slices/auth/auth";
+import { SetCompleteStep, setPhoneStep } from "~/store/slices/login/login";
 import { useState } from "react";
-import {
-  Visibility,
-  VisibilityOff,
-} from "~/components/svgComponents/PasswordVisibilityIcons";
+import Hide from "~/assets/icons/Hide.svg?react";
+import Show from "~/assets/icons/Show.svg?react";
 import { useNavigate } from "react-router-dom";
 import { OtpCountdown } from "./MemoCountdown";
 
@@ -42,16 +40,11 @@ export const OtpForm = () => {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
-  };
-
   const onSubmit = (data: OtpNumber) => {
     if (data.otp) {
       if (checkOtp()) {
-        dispatch(complete());
+        localStorage.removeItem("phoneNumber");
+        dispatch(SetCompleteStep());
         goToMainPage();
       }
     } else {
@@ -62,7 +55,7 @@ export const OtpForm = () => {
   const goToMainPage = () => navigate(`/`);
 
   const handleClickReturn = () => {
-    dispatch(phone());
+    dispatch(setPhoneStep());
   };
 
   return (
@@ -101,9 +94,8 @@ export const OtpForm = () => {
                       <IconButton
                         aria-label="toggle password visibility"
                         onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
                       >
-                        {showPassword ? <Visibility /> : <VisibilityOff />}
+                        {showPassword ? <Show /> : <Hide />}
                       </IconButton>
                     </InputAdornment>
                   ),
