@@ -55,7 +55,7 @@ const Tariff = ({ info }: { info: ITariffInfo }) => {
           {info.staticPrice ? `${info.price} ₽/месяц` : "По тарифу"}
         </Typography>
         {info.active ? (
-          <Typography variant="B2SemiBold" color="text.accent">
+          <Typography variant="B2SemiBold" color="text.status">
             Активен
           </Typography>
         ) : (

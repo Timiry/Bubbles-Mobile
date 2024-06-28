@@ -107,6 +107,7 @@ export default (mode: PaletteMode) =>
               primary: "#D9D9D9",
               secondary: "#8E8E8E",
               accent: "#1FB0EE",
+              status: "1FB0EE",
             },
             input: {
               primary: "#FFFFFF",
@@ -153,6 +154,7 @@ export default (mode: PaletteMode) =>
               primary: "#000000",
               secondary: "#8E99A5",
               accent: "#1FB0EE",
+              status: "#25C10C",
             },
             input: {
               primary: "#FFFFFF",
