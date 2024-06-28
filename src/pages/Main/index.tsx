@@ -38,7 +38,7 @@ const allTrafficInfo = [
 ];
 
 const tariffInfo = {
-  imgUrl: "/src/assets/imgs/tariff1.jpg",
+  imgUrl: "/tariff.jpg",
   title: "Моя семья M",
   description:
     "Звонки и SMS на номера Республики Крым, г. Севастополь и Краснодарского края",
