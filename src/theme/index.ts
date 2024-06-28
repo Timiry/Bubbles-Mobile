@@ -141,7 +141,7 @@ export default (mode: PaletteMode) =>
             icon: {
               accent: "#1FB0EE",
               secondary: "#858F9B",
-              iconBackground: "#8E99A5",
+              iconBackground: "#F2F3F6",
             },
             text: {
               primary: "#000000",
