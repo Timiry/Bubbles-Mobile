@@ -3,7 +3,9 @@ import Grid from "@mui/material/Grid";
 import MainLayout from "~/components/layout/Main";
 import MoneyInfo from "~/components/MoneyAccountInfo/index";
 import Traffic from "~/components/Traffic";
+import Tariff from "~/components/Tariff";
 import { Box, Typography } from "@mui/material";
+//import tariff1 from "~/assets/imgs/tariff1.png";
 
 const moneyAccountInfo = {
   lastUpdate: "12:44",
@@ -35,6 +37,34 @@ const allTrafficInfo = [
   },
 ];
 
+const tariffInfo = {
+  imgUrl: "/src/assets/imgs/tariff1.jpg",
+  title: "Моя семья M",
+  description:
+    "Звонки и SMS на номера Республики Крым, г. Севастополь и Краснодарского края",
+  price: 650,
+  staticPrice: true,
+  active: true,
+  traffic: [
+    {
+      type: "Звонки",
+      description:
+        "Звонки на номера операторов Республики Крым, г. Севастополь и Краснодарского края - 800 минут",
+      count: 800,
+    },
+    {
+      type: "Интернет",
+      description: "",
+      count: 100,
+    },
+    {
+      type: "SMS",
+      description: "",
+      count: 100,
+    },
+  ],
+};
+
 const MainPage = () => {
   return (
     <MainLayout>
@@ -49,6 +79,14 @@ const MainPage = () => {
             </Typography>
           </Box>
           <Traffic allInfo={allTrafficInfo}></Traffic>
+        </Grid>
+        <Grid item>
+          <Box mb="20px">
+            <Typography variant="H3SemiBold" color="text.primary">
+              Тариф
+            </Typography>
+          </Box>
+          <Tariff info={tariffInfo}></Tariff>
         </Grid>
       </Grid>
     </MainLayout>
