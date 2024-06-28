@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { memo, useReducer, useState } from "react";
 import Countdown, { CountdownRenderProps } from "react-countdown";
-import Restart from "~/assets/icons/Restart.svg?react";
+import Restart from "~/assets/icons/restart.svg?react";
 
 export const CountdownApi = () => {
   const [date, setDate] = useState(Date.now() + 10000);

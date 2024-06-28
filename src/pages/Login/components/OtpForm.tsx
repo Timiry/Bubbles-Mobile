@@ -11,8 +11,8 @@ import { useAppDispatch } from "~/store";
 import { LoginInputField, SubmitButton } from "../styles";
 import { setCompleteStep, setPhoneStep } from "~/store/slices/login";
 import { useState } from "react";
-import Hide from "~/assets/icons/Hide.svg?react";
-import Show from "~/assets/icons/Show.svg?react";
+import Hide from "~/assets/icons/hide.svg?react";
+import Show from "~/assets/icons/show.svg?react";
 import { useNavigate } from "react-router-dom";
 import { OtpCountdown } from "./MemoCountdown";
 
