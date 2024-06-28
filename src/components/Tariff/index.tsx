@@ -6,7 +6,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import MuiDivider from "~/theme/components/MuiDivider";
+import MuiDivider from "~/components/ui/MuiDivider";
 import TariffTrafficItem, {
   ITariffTrafficInfo,
 } from "./Components/TariffTrafficItem";

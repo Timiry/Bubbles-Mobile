@@ -68,7 +68,7 @@ const tariffInfo = {
 const MainPage = () => {
   return (
     <MainLayout>
-      <Grid container columnSpacing="8px" rowSpacing="60px">
+      <Grid container columnSpacing="8px" rowSpacing="60px" pb="80px">
         <Grid item mobile={12}>
           <MoneyInfo info={moneyAccountInfo}></MoneyInfo>
         </Grid>

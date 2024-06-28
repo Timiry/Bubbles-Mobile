@@ -1,5 +1,5 @@
 import { Button, Card, Grid, Typography } from "@mui/material";
-import MuiDivider from "~/theme/components/MuiDivider";
+import MuiDivider from "~/components/ui/MuiDivider";
 
 interface IMoneyAccountInfo {
   lastUpdate: string;
@@ -9,20 +9,20 @@ interface IMoneyAccountInfo {
   accountNumber: number;
 }
 
-const MoneyInfo = ({ info }: { info: IMoneyAccountInfo }) => {
-  function accountNumberFormat(accountNumber: number) {
-    const pre = accountNumber.toString();
-    return (
-      pre.slice(0, 3) +
-      " " +
-      pre.slice(3, 6) +
-      " " +
-      pre.slice(6, 8) +
-      " " +
-      pre.slice(8)
-    );
-  }
+function accountNumberFormat(accountNumber: number) {
+  const pre = accountNumber.toString();
+  return (
+    pre.slice(0, 3) +
+    " " +
+    pre.slice(3, 6) +
+    " " +
+    pre.slice(6, 8) +
+    " " +
+    pre.slice(8)
+  );
+}
 
+const MoneyInfo = ({ info }: { info: IMoneyAccountInfo }) => {
   return (
     <Card variant="outlined" sx={{ borderRadius: "16px", maxWidth: "450px" }}>
       <Grid container p="20px">
