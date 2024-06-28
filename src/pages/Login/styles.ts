@@ -32,7 +32,7 @@ export const SubmitButton = styled(Button)(({ theme }) => ({
   width: "100%",
   height: "52px",
   backgroundColor: `${theme.palette.button.primary}`,
-  "&:hover": {
+  "& :hover": {
     backgroundColor: `${theme.palette.button.secondary}`,
   },
 }));
