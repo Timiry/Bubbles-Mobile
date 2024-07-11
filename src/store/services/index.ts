@@ -7,7 +7,7 @@ import {
 import { Mutex } from "async-mutex";
 
 import { RootState } from "..";
-import { removeSession } from "../slices/auth/auth";
+import { removeSession } from "../slices/auth";
 
 const mutex = new Mutex();
 

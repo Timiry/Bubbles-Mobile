@@ -6,8 +6,8 @@ import Box from "@mui/material/Box";
 import LogoImage from "~/components/ui/Logo";
 
 import AdaptiveWrapper from "../AdaptiveWrapper";
+import MenuItem from "./components/MenuItem/index";
 import { HeaderContainer, MenuContainer, StyledLocationIcon } from "./styles";
-import { useLocation } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -83,18 +83,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const MenuItem = ({ title, href }: { title: string; href: string }) => {
-  const { pathname } = useLocation();
-
-  return (
-    <Link href={href} pl="20px" sx={{ textDecoration: "none" }}>
-      <Typography
-        variant="B1Bold"
-        color={pathname === href ? "text.primary" : "text.secondary"}
-      >
-        {title}
-      </Typography>
-    </Link>
-  );
-};

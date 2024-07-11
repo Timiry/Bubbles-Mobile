@@ -25,7 +25,7 @@ interface ITariffInfo {
 const Tariff = ({ info }: { info: ITariffInfo }) => {
   return (
     <Card variant="outlined" sx={{ borderRadius: "16px", maxWidth: "450px" }}>
-      <CardMedia image={info.imgUrl} sx={{ height: 172 }} />
+      <CardMedia component="img" image={info.imgUrl} sx={{ height: 172 }} />
       <CardHeader
         action={
           <IconButton aria-label="settings">

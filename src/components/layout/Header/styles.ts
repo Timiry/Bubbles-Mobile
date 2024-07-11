@@ -9,7 +9,8 @@ export const HeaderContainer = styled(Box)(({ theme }) => ({
   fontStyle: "oblique",
 }));
 
-export const MenuContainer = styled(Box)(() => ({
+export const MenuContainer = styled(Box)(({ theme }) => ({
+  boxShadow: `0 4px 8px 0 ${theme.palette.general.shadow}`,
   fontStyle: "oblique",
 }));
 

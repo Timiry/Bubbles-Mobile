@@ -22,81 +22,152 @@ declare module "@mui/material/styles" {
   }
 
   interface Palette {
-    general: Palette["primary"];
-    icon: Palette["primary"];
-    input: Palette["primary"];
-    button: Palette["primary"];
-    other: Palette["primary"];
-    customText: Palette["primary"];
+    general: {
+      primary: string;
+      secondary: string;
+      information: string;
+      shadow: string;
+    };
+    icon: {
+      accent: string;
+      secondary: string;
+      iconBackground: string;
+    };
+    input: {
+      primary: string;
+      secondary: string;
+      active: string;
+      disabled: string;
+      error: string;
+    };
+    button: {
+      primary: string;
+      primaryHover: string;
+      primaryDisabled: string;
+      secondary: string;
+      secondaryHover: string;
+      secondaryBackground: string;
+    };
+    other: {
+      stroke: string;
+      underline: string;
+      underlineAccent: string;
+      shimmer: string;
+      progressBar: string;
+    };
   }
 
-  // allow configuration using `createTheme`
   interface PaletteOptions {
-    general?: PaletteOptions["primary"];
-    icon?: PaletteOptions["primary"];
-    input?: PaletteOptions["primary"];
-    button?: PaletteOptions["primary"];
-    other?: PaletteOptions["primary"];
-    customText?: PaletteOptions["primary"];
+    general: {
+      primary: string;
+      secondary: string;
+      information: string;
+      shadow: string;
+    };
+    icon: {
+      accent: string;
+      secondary: string;
+      iconBackground: string;
+    };
+    input: {
+      primary: string;
+      secondary: string;
+      active: string;
+      disabled: string;
+      error: string;
+    };
+    button: {
+      primary: string;
+      primaryHover: string;
+      primaryDisabled: string;
+      secondary: string;
+      secondaryHover: string;
+      secondaryBackground: string;
+    };
+    other: {
+      stroke: string;
+      underline: string;
+      underlineAccent: string;
+      shimmer: string;
+    };
   }
 
-  interface PaletteColor {
-    accent: string;
-    primary: string;
-    secondary: string;
-    information: string;
-    disabled: string;
-    success: string;
-    error: string;
-    warning: string;
-    light: string;
-    iconBackground: string;
-    accentDisabled: string;
-    status: string;
-    mask: string;
-    active: string;
-    primaryDisabled: string;
-    primaryHover: string;
-    secondaryBackground: string;
-    secondaryDisabled: string;
-    secondaryHover: string;
-    stroke: string;
-    underline: string;
-    underlineAccent: string;
-    shimmer: string;
-    shadow: string;
-    progressBar: string;
-    sliderBackground: string;
-  }
+  // interface Palette {
+  //   general: Palette["primary"];
+  //   icon: Palette["primary"];
+  //   input: Palette["primary"];
+  //   button: Palette["primary"];
+  //   other: Palette["primary"];
+  //   customText: Palette["primary"];
+  // }
 
-  interface PaletteColorOptions {
-    accent?: string;
-    primary?: string;
-    secondary?: string;
-    information?: string;
-    disabled?: string;
-    success?: string;
-    error?: string;
-    warning?: string;
-    light?: string;
-    iconBackground?: string;
-    accentDisabled?: string;
-    status?: string;
-    mask?: string;
-    active?: string;
-    primaryDisabled?: string;
-    primaryHover?: string;
-    secondaryBackground?: string;
-    secondaryDisabled?: string;
-    secondaryHover?: string;
-    stroke?: string;
-    underline?: string;
-    underlineAccent?: string;
-    shimmer?: string;
-    shadow?: string;
-    progressBar?: string;
-    sliderBackground?: string;
-  }
+  // // allow configuration using `createTheme`
+  // interface PaletteOptions {
+  //   general?: PaletteOptions["primary"];
+  //   icon?: PaletteOptions["primary"];
+  //   input?: PaletteOptions["primary"];
+  //   button?: PaletteOptions["primary"];
+  //   other?: PaletteOptions["primary"];
+  //   customText?: PaletteOptions["primary"];
+  // }
+
+  // interface PaletteColor {
+  //   accent: string;
+  //   primary: string;
+  //   secondary: string;
+  //   information: string;
+  //   disabled: string;
+  //   success: string;
+  //   error: string;
+  //   warning: string;
+  //   light: string;
+  //   iconBackground: string;
+  //   accentDisabled: string;
+  //   status: string;
+  //   mask: string;
+  //   active: string;
+  //   primaryDisabled: string;
+  //   primaryHover: string;
+  //   secondaryBackground: string;
+  //   secondaryDisabled: string;
+  //   secondaryHover: string;
+  //   stroke: string;
+  //   underline: string;
+  //   underlineAccent: string;
+  //   shimmer: string;
+  //   shadow: string;
+  //   progressBar: string;
+  //   sliderBackground: string;
+  // }
+
+  // interface PaletteColorOptions {
+  //   accent?: string;
+  //   primary?: string;
+  //   secondary?: string;
+  //   information?: string;
+  //   disabled?: string;
+  //   success?: string;
+  //   error?: string;
+  //   warning?: string;
+  //   light?: string;
+  //   iconBackground?: string;
+  //   accentDisabled?: string;
+  //   status?: string;
+  //   mask?: string;
+  //   active?: string;
+  //   primaryDisabled?: string;
+  //   primaryHover?: string;
+  //   secondaryBackground?: string;
+  //   secondaryDisabled?: string;
+  //   secondaryHover?: string;
+  //   stroke?: string;
+  //   underline?: string;
+  //   underlineAccent?: string;
+  //   shimmer?: string;
+  //   shadow?: string;
+  //   progressBar?: string;
+  //   sliderBackground?: string;
+  // }
 
   interface TypographyVariants {
     H1Bold: React.CSSProperties;

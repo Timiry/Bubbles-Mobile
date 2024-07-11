@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 //import { accessTokenSelector } from "./store/slices/auth/auth";
 import MainPage from "./pages/Main";
 import LoginPage from "./pages/Login";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   //const token = useSelector(accessTokenSelector);
@@ -30,7 +31,7 @@ function App() {
         /> */}
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element="404 Not Found" />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </ErrorBoundary>
   );
