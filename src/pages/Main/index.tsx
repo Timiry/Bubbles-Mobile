@@ -1,11 +1,9 @@
-import Grid from "@mui/material/Grid";
-
 import MainLayout from "~/components/layout/Main";
 import MoneyInfo from "~/components/MoneyAccountInfo/index";
 import Traffic from "~/components/Traffic";
 import Tariff from "~/components/Tariff";
 import FallBack from "~/components/FallBack";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import { ErrorBoundary } from "react-error-boundary";
 
 const moneyAccountInfo = {
