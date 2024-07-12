@@ -18,6 +18,7 @@ declare module "@mui/material/styles" {
     primary: string;
     secondary: string;
     accent: string;
+    status: string;
   }
 
   interface Palette {

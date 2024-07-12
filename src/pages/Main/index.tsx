@@ -1,11 +1,10 @@
-import Grid from "@mui/material/Grid";
-
 import MainLayout from "~/components/layout/Main";
 import MoneyInfo from "~/components/MoneyAccountInfo/index";
 import Traffic from "~/components/Traffic";
 import Tariff from "~/components/Tariff";
-import { Box, Typography } from "@mui/material";
-//import tariff1 from "~/assets/imgs/tariff1.png";
+import FallBack from "~/components/FallBack";
+import { Box, Typography, Grid } from "@mui/material";
+import { ErrorBoundary } from "react-error-boundary";
 
 const moneyAccountInfo = {
   lastUpdate: "12:44",
@@ -69,8 +68,15 @@ const MainPage = () => {
   return (
     <MainLayout>
       <Grid container columnSpacing="8px" rowSpacing="60px" pb="80px">
-        <Grid item mobile={12}>
-          <MoneyInfo info={moneyAccountInfo}></MoneyInfo>
+        <Grid item>
+          <ErrorBoundary
+            fallback={FallBack(
+              "Не удалось получить информацию о счетах",
+              "258px"
+            )}
+          >
+            <MoneyInfo info={moneyAccountInfo}></MoneyInfo>
+          </ErrorBoundary>
         </Grid>
         <Grid item>
           <Box mb="20px">
@@ -78,7 +84,15 @@ const MainPage = () => {
               Трафик
             </Typography>
           </Box>
-          <Traffic allInfo={allTrafficInfo}></Traffic>
+          <ErrorBoundary
+            fallback={FallBack(
+              "Не удалось получить информацию о трафике",
+              "130px",
+              "940px"
+            )}
+          >
+            <Traffic allInfo={allTrafficInfo}></Traffic>
+          </ErrorBoundary>
         </Grid>
         <Grid item>
           <Box mb="20px">
@@ -86,7 +100,15 @@ const MainPage = () => {
               Тариф
             </Typography>
           </Box>
-          <Tariff info={tariffInfo}></Tariff>
+          <ErrorBoundary
+            fallback={FallBack(
+              "Не удалось получить информацию о тарифе",
+              "436px",
+              "450px"
+            )}
+          >
+            <Tariff info={tariffInfo} />
+          </ErrorBoundary>
         </Grid>
       </Grid>
     </MainLayout>
