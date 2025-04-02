@@ -8,6 +8,7 @@ export interface ITariffTrafficInfo {
   type: string;
   description: string;
   count: number;
+  staticPrice: boolean;
 }
 
 const trafficToMeasure = new Map([
@@ -22,6 +23,7 @@ const TariffTrafficItem = ({ info }: { info: ITariffTrafficInfo }) => {
       <Typography variant="H4Bold" color="text.primary">
         {info.count}{" "}
         <Typography variant="B5Bold">
+          {info.staticPrice ? "" : "₽/"}
           {trafficToMeasure.get(info.type)}
         </Typography>
       </Typography>

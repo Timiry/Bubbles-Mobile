@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardHeader,
   CardMedia,
@@ -12,7 +13,7 @@ import TariffTrafficItem, {
 } from "./Components/TariffTrafficItem";
 import { StyledArrowRightIcon } from "./styles";
 
-interface ITariffInfo {
+export interface ITariffInfo {
   imgUrl: string;
   title: string;
   description: string;
@@ -50,7 +51,13 @@ const Tariff = ({ info }: { info: ITariffInfo }) => {
         </Grid>
       </Grid>
       <MuiDivider />
-      <Grid container justifyContent="space-between" width="100%" p="20px">
+      <Grid
+        container
+        justifyContent="space-between"
+        alignItems="center"
+        width="100%"
+        p="20px"
+      >
         <Typography variant="H4Bold" color="text.primary">
           {info.staticPrice ? `${info.price} ₽/месяц` : "По тарифу"}
         </Typography>
@@ -59,7 +66,9 @@ const Tariff = ({ info }: { info: ITariffInfo }) => {
             Активен
           </Typography>
         ) : (
-          ""
+          <Button variant="contained" size="small">
+            Подключить
+          </Button>
         )}
       </Grid>
     </Card>
