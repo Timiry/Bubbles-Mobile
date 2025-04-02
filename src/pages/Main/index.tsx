@@ -37,7 +37,7 @@ const allTrafficInfo = [
 ];
 
 const tariffInfo = {
-  imgUrl: "/tariff.jpg",
+  imgUrl: "/tariffs/1.jpg",
   title: "Моя семья M",
   description:
     "Звонки и SMS на номера Республики Крым, г. Севастополь и Краснодарского края",
@@ -50,16 +50,19 @@ const tariffInfo = {
       description:
         "Звонки на номера операторов Республики Крым, г. Севастополь и Краснодарского края - 800 минут",
       count: 800,
+      staticPrice: true,
     },
     {
       type: "Интернет",
       description: "",
       count: 100,
+      staticPrice: true,
     },
     {
       type: "SMS",
       description: "",
       count: 100,
+      staticPrice: true,
     },
   ],
 };
