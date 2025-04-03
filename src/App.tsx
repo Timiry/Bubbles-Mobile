@@ -9,6 +9,7 @@ import MainPage from "./pages/Main";
 import LoginPage from "./pages/Login";
 import NotFoundPage from "./pages/NotFoundPage";
 import TariffsPage from "./pages/Tariffs";
+import ServicesPage from "./pages/Services";
 
 const tariffsInfo = [
   {
@@ -133,6 +134,93 @@ const tariffsInfo = [
   },
 ];
 
+const servicesInfo = [
+  {
+    id: 1,
+    title: "",
+    description:
+      "Интернет закончился раньше, чем вы планировали? Докупите еще 15 Гб на максимальной скорости.",
+    values: [
+      {
+        price: "200 ₽/месяц",
+        description: "Абонентская плата",
+      },
+      {
+        price: "100 ₽",
+        description: "При первом подключении",
+      },
+      {
+        price: "300 ₽",
+        description: "При повторн. подключении",
+      },
+      {
+        price: "300 ₽",
+        description: "При повторн. подключении",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "",
+    description:
+      "Интернет закончился раньше, чем вы планировали? Докупите еще 15 Гб на максимальной скорости.",
+    values: [
+      {
+        price: "200 ₽/месяц",
+        description: "Абонентская плата",
+      },
+      {
+        price: "100 ₽",
+        description: "При первом подключении",
+      },
+      {
+        price: "300 ₽",
+        description: "При повторн. подключении",
+      },
+      {
+        price: "300 ₽",
+        description: "При повторн. подключении",
+      },
+      {
+        price: "300 ₽",
+        description: "При повторн. подключении",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "",
+    description:
+      "Интернет закончился раньше, чем вы планировали? Докупите еще 15 Гб на максимальной скорости.",
+    values: [
+      {
+        price: "200 ₽/месяц",
+        description: "Абонентская плата",
+      },
+      {
+        price: "100 ₽",
+        description: "При первом подключении",
+      },
+      {
+        price: "300 ₽",
+        description: "При повторн. подключении",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "",
+    description:
+      "Интернет закончился раньше, чем вы планировали? Докупите еще 15 Гб на максимальной скорости.",
+    values: [
+      {
+        price: "200 ₽/месяц",
+        description: "Абонентская плата",
+      },
+    ],
+  },
+];
+
 function App() {
   //const token = useSelector(accessTokenSelector);
 
@@ -157,6 +245,10 @@ function App() {
         <Route
           path="/tariffs"
           element={<TariffsPage allTariffsInfo={tariffsInfo} />}
+        />
+        <Route
+          path="/services"
+          element={<ServicesPage allServicesInfo={servicesInfo} />}
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage />} />
