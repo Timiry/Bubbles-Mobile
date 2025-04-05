@@ -10,6 +10,7 @@ import LoginPage from "./pages/Login";
 import NotFoundPage from "./pages/NotFoundPage";
 import TariffsPage from "./pages/Tariffs";
 import ServicesPage from "./pages/Services";
+import ProfilePage from "./pages/Profile";
 
 const tariffsInfo = [
   {
@@ -217,9 +218,21 @@ const servicesInfo = [
         price: "200 ₽/месяц",
         description: "Абонентская плата",
       },
+      {
+        price: "100 ₽",
+        description: "При первом подключении",
+      },
     ],
   },
 ];
+
+const profileInfo = {
+  name: "Дмитрий Алексеевич Иванов",
+  contractNumber: "645 684 68 46",
+  accountNumber: "645 684 68 46",
+  lastChangePassDate: "01.03.2025",
+  telNumber: "+7 (978) 655-88-88",
+};
 
 function App() {
   //const token = useSelector(accessTokenSelector);
@@ -249,6 +262,10 @@ function App() {
         <Route
           path="/services"
           element={<ServicesPage allServicesInfo={servicesInfo} />}
+        />
+        <Route
+          path="/profile"
+          element={<ProfilePage profileInfo={profileInfo} />}
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage />} />

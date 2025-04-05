@@ -1,5 +1,5 @@
 import Tariff, { ITariffInfo } from "~/components/Tariff";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import MainLayout from "~/components/layout/Main";
 
 const TariffsPage = ({
@@ -9,9 +9,12 @@ const TariffsPage = ({
 }) => {
   return (
     <MainLayout>
-      <Grid container columnSpacing="40px" rowSpacing="40px" pb="80px">
+      <Typography variant="H3SemiBold" color="text.primary">
+        Мобильная связь
+      </Typography>
+      <Grid container columnSpacing="40px" rowSpacing="40px" p="20px 0 80px">
         {allTariffsInfo?.map((info) => (
-          <Grid item key={info.title}>
+          <Grid key={info.title}>
             <Tariff info={info} />
           </Grid>
         ))}

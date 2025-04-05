@@ -39,7 +39,7 @@ const Tariff = ({ info }: { info: ITariffInfo }) => {
       <Grid container p="20px">
         <Grid container columnSpacing="45px">
           {info.traffic?.map((item) => (
-            <Grid item key={item.type}>
+            <Grid key={item.type}>
               <TariffTrafficItem info={item} />
             </Grid>
           ))}

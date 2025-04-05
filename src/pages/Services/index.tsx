@@ -14,7 +14,7 @@ const ServicesPage = ({
       </Typography>
       <Grid container columnSpacing="40px" rowSpacing="40px" p="20px 0 80px">
         {allServicesInfo?.map((info) => (
-          <Grid item key={info.id}>
+          <Grid key={info.id}>
             <Service info={info} />
           </Grid>
         ))}

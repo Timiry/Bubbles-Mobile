@@ -48,12 +48,12 @@ const MoneyInfo = ({ info }: { info: IMoneyAccountInfo }) => {
   return (
     <Card variant="outlined" sx={{ borderRadius: "16px", maxWidth: "450px" }}>
       <Grid container p="20px">
-        <Grid item pt="10px">
+        <Grid pt="10px">
           <Typography variant="B7Regular" color="text.secondary">
             Обновлено в {info.lastUpdate}
           </Typography>
         </Grid>
-        <Grid item width="100%" pt="8px">
+        <Grid width="100%" pt="8px">
           <Grid container alignItems="center" justifyContent="space-between">
             <Typography variant="H1Bold" color="text.primary">
               {info.balanse.toLocaleString()} ₽
@@ -63,7 +63,7 @@ const MoneyInfo = ({ info }: { info: IMoneyAccountInfo }) => {
             </Button>
           </Grid>
         </Grid>
-        <Grid item pt="50px">
+        <Grid pt="50px">
           <Typography variant="B4Regular" color="text.primary">
             Следующее списание по тарифу {info.nextPaimentDate} в размере{" "}
             <Typography variant="B1Bold" color="text.primary">
@@ -85,9 +85,6 @@ const MoneyInfo = ({ info }: { info: IMoneyAccountInfo }) => {
       <Dialog
         onClose={handleClose}
         open={open}
-        sx={{
-          borderRadius: "16px",
-        }}
         PaperProps={{
           style: {
             borderRadius: "16px",

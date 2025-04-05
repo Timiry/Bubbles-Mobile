@@ -42,7 +42,7 @@ const Service = ({ info }: { info: IServiceInfo }) => {
         </Grid>
         <Grid container columnSpacing="10px" rowSpacing="10px" pt="20px">
           {info.values.slice(1).map((item) => (
-            <Grid item key={item.description}>
+            <Grid key={item.description}>
               <Box display={"flex"} flexDirection={"column"} width="199px">
                 <Typography variant="H4Bold">{item.price}</Typography>
                 <Typography variant="B7Regular" color="text.secondary">

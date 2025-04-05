@@ -14,7 +14,7 @@ const NotFoundPage = () => {
       width="100vw"
       height="100vh"
     >
-      <Grid item container width="320px" height="182px" justifyContent="center">
+      <Grid container width="320px" height="182px" justifyContent="center">
         <Typography
           color="text.primary"
           variant="H2SemiBold"

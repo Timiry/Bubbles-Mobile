@@ -5,7 +5,7 @@ const Traffic = ({ allInfo }: { allInfo: Array<ITrafficInfo> }) => {
   return (
     <Grid container columnSpacing="16px" rowSpacing="16px">
       {allInfo?.map((info) => (
-        <Grid item key={info.type}>
+        <Grid key={info.type}>
           <TrafficItem info={info} />
         </Grid>
       ))}

@@ -71,7 +71,7 @@ const MainPage = () => {
   return (
     <MainLayout>
       <Grid container columnSpacing="8px" rowSpacing="60px" pb="80px">
-        <Grid item>
+        <Grid>
           <ErrorBoundary
             fallback={FallBack(
               "Не удалось получить информацию о счетах",
@@ -81,7 +81,7 @@ const MainPage = () => {
             <MoneyInfo info={moneyAccountInfo}></MoneyInfo>
           </ErrorBoundary>
         </Grid>
-        <Grid item>
+        <Grid>
           <Box mb="20px">
             <Typography variant="H3SemiBold" color="text.primary">
               Трафик
@@ -97,7 +97,7 @@ const MainPage = () => {
             <Traffic allInfo={allTrafficInfo}></Traffic>
           </ErrorBoundary>
         </Grid>
-        <Grid item>
+        <Grid>
           <Box mb="20px">
             <Typography variant="H3SemiBold" color="text.primary">
               Тариф

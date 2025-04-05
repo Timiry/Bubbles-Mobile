@@ -14,39 +14,42 @@ const Header = () => {
     <>
       <HeaderContainer>
         <AdaptiveWrapper>
-          <Box height="90px" display="flex" alignItems="center">
-            <Grid container justifyContent="space-between" wrap="nowrap">
-              <Grid item>
-                <Grid container>
-                  <Grid item pt="20px" pb="10px" px="5px">
-                    <LogoImage size="50px" />
-                  </Grid>
-                  <Grid item py="35px">
-                    <Link href="/" pl="20px" sx={{ textDecoration: "none" }}>
-                      <Typography variant="B1Bold" color="text.primary">
-                        Личный кабинет
-                      </Typography>
-                    </Link>
-                    <Link
-                      href="https://bubbles-mobile.com"
-                      pl="30px"
-                      sx={{ textDecoration: "none" }}
-                    >
-                      <Typography variant="B1Bold" color="text.secondary">
-                        Официальный сайт
-                      </Typography>
-                    </Link>
-                  </Grid>
+          <Box
+            height="90px"
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Grid>
+              <Grid container>
+                <Grid pt="20px" pb="10px" px="5px">
+                  <LogoImage size="50px" />
+                </Grid>
+                <Grid py="35px">
+                  <Link href="/" pl="20px" sx={{ textDecoration: "none" }}>
+                    <Typography variant="B1Bold" color="text.primary">
+                      Личный кабинет
+                    </Typography>
+                  </Link>
+                  <Link
+                    href="https://bubbles-mobile.com"
+                    pl="30px"
+                    sx={{ textDecoration: "none" }}
+                  >
+                    <Typography variant="B1Bold" color="text.secondary">
+                      Официальный сайт
+                    </Typography>
+                  </Link>
                 </Grid>
               </Grid>
-              <Grid item py="32px" display="flex" alignItems="center">
-                <Box pr="6px">
-                  <StyledLocationIcon />
-                </Box>
-                <Typography variant="B1Bold" color="text.secondary">
-                  г. Симферополь
-                </Typography>
-              </Grid>
+            </Grid>
+            <Grid py="32px" display="flex" alignItems="center">
+              <Box pr="6px">
+                <StyledLocationIcon />
+              </Box>
+              <Typography variant="B1Bold" color="text.secondary">
+                г. Симферополь
+              </Typography>
             </Grid>
           </Box>
         </AdaptiveWrapper>
